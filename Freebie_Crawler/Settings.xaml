@@ -1,0 +1,20 @@
+﻿<Window x:Class="Freebie_Crawler.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Options" Height="340" Width="300" Icon="Explorer.ico" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Refresh every" HorizontalAlignment="Left" Margin="9,57,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label Content="minutes" HorizontalAlignment="Left" Margin="228,57,0,0" VerticalAlignment="Top" Width="54"/>
+        <ComboBox x:Name="Minutes_Combobox" HorizontalAlignment="Left" Margin="98,61,0,0" VerticalAlignment="Top" Width="125"/>
+        <Label Content="General Settings" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20"/>
+        <Label Content="________________________________________________________" HorizontalAlignment="Left" Margin="9,26,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="MinimizeToTray" Content="Minimize on Close" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top"/>
+        <Label Content="Windows Settings" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20"/>
+        <Label Content="____________________________________________________________" HorizontalAlignment="Left" Margin="9,154,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Notify_Win10" Content="Notify me using the Windows 10 Notifications" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Height="18" Width="272"/>
+        <CheckBox x:Name="Notify_PopUp" Content="Notify me using a Pop-Up" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top"/>
+        <Button Content="Apply" HorizontalAlignment="Left" Margin="105,265,0,0" VerticalAlignment="Top" Width="75" Click="Apply_Clicked"/>
+
+
+    </Grid>
+</Window>

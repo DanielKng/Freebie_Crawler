@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Freebie_Crawler.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Minimize_Tray" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Refresh_Time" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="Windows10_Notify" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PopUp_Notify" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Crawl_URL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://www.wir-machen-druck.de/Fototasse-TOPSELLER-bedruckt-in-brillanter-Fotoqualitt-mit-Ihrem-Motiv,detail,23234.html</Value>
+    </Setting>
+    <Setting Name="Crawl_Keyword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Gratis Tassen verfügbar!</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
