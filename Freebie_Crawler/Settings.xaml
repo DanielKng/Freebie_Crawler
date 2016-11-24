@@ -8,11 +8,11 @@
         <ComboBox x:Name="Minutes_Combobox" HorizontalAlignment="Left" Margin="98,61,0,0" VerticalAlignment="Top" Width="125"/>
         <Label Content="General Settings" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20"/>
         <Label Content="________________________________________________________" HorizontalAlignment="Left" Margin="9,26,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="MinimizeToTray" Content="Minimize on Close" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="MinimizeToTray" Content="Minimize on Close" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" IsEnabled="False"/>
         <Label Content="Windows Settings" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="20"/>
         <Label Content="____________________________________________________________" HorizontalAlignment="Left" Margin="9,154,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="Notify_Win10" Content="Notify me using the Windows 10 Notifications" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Height="18" Width="272"/>
-        <CheckBox x:Name="Notify_PopUp" Content="Notify me using a Pop-Up" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Notify_Win10" Content="Notify me using the Windows 10 Notifications" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Height="18" Width="272" IsEnabled="False"/>
+        <CheckBox x:Name="Notify_PopUp" Content="Notify me using a Pop-Up" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top" IsEnabled="False"/>
         <Button Content="Apply" HorizontalAlignment="Left" Margin="105,265,0,0" VerticalAlignment="Top" Width="75" Click="Apply_Clicked"/>
 
 
