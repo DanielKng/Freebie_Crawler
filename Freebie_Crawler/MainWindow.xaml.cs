@@ -21,6 +21,7 @@ namespace Freebie_Crawler
             InitializeComponent();
             //A shourtcut is needed for the Toast to show up.
             win10_notification.TryCreateShortcut();
+            this.Activate();
         }
 
         public void CrawlWebsite()
@@ -66,6 +67,12 @@ namespace Freebie_Crawler
         {
             var FreebieCrawlerSettings = new Freebie_Crawler_URL();
             FreebieCrawlerSettings.Show();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

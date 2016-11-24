@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Windows;
-using System.Windows.Controls;
 using Freebie_Crawler.ShellHelpers;
 using MS.WindowsAPICodePack.Internal;
 using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
 
 using Windows.UI.Notifications;
 using Windows.Data.Xml.Dom;
-using System.Net;
+using System.Windows.Threading;
+using Windows.Foundation;
+using System.Windows;
 
 namespace Freebie_Crawler
 {
@@ -17,7 +17,7 @@ namespace Freebie_Crawler
     {
         //AP_ID used to create the Windows Notification
         private const String APP_ID = "Freebie_Crawler";
-
+        public event TypedEventHandler<ToastNotification, object> Activated;
         // In order to display toasts, a desktop application must have a shortcut on the Start menu.
         // Also, an AppUserModelID must be set on that shortcut.
         // The shortcut should be created as part of the installer. The following code shows how to create
@@ -72,18 +72,24 @@ namespace Freebie_Crawler
 
             // Fill in the text elements
             XmlNodeList stringElements = toastXml.GetElementsByTagName("text");
-            stringElements[1].AppendChild(toastXml.CreateTextNode("Es sind wieder Gratistassen verfügbar!"));
+            stringElements[1].AppendChild(toastXml.CreateTextNode("Hey, I found something!"));
 
             // Specify the absolute path to an image
-            String imagePath = "file:///" + Path.GetFullPath("toastImageAndText.png");
+            String imagePath = "file:///" + Path.GetFullPath("ToastIcon.png");
             XmlNodeList imageElements = toastXml.GetElementsByTagName("image");
             imageElements[0].Attributes.GetNamedItem("src").NodeValue = imagePath;
 
             // Create the toast and attach event listeners
             ToastNotification toast = new ToastNotification(toastXml);
+            toast.Activated += ToastActivated;
 
             // Show the toast. Be sure to specify the AppUserModelId on your application's shortcut!
-            ToastNotificationManager.CreateToastNotifier("Hier klicken zum Bestellen!").Show(toast);
+            ToastNotificationManager.CreateToastNotifier("Click to Open").Show(toast);
+        }
+
+        private void ToastActivated(ToastNotification sender, object e)
+        {
+            Process.Start(Properties.Settings.Default.Crawl_URL);
         }
     }
 }

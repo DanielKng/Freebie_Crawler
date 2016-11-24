@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Refresh_Call" Height="300" Width="300" ShowInTaskbar="False" WindowState="Minimized">
     <Grid>
-        
+        <TextBlock x:Name="TextObject" HorizontalAlignment="Left" Margin="104,74,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
