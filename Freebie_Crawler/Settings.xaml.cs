@@ -180,6 +180,8 @@ namespace Freebie_Crawler
         private void SaveSettings()
         {
             Properties.Settings.Default.Save();
+            //We still love WinForms, dont we?
+            System.Windows.Forms.Application.Restart();
         }
     }
 }

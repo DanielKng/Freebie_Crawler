@@ -16,7 +16,7 @@ namespace Freebie_Crawler
     public partial class MainWindow : Window
     {
         Windows10_Notifications win10_notification = new Windows10_Notifications();
-
+        Refresh_Call callRefresh = new Refresh_Call();
         public MainWindow()
         {
             InitializeComponent();
