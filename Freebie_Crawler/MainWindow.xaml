@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Freebie Crawler" Height="200" Width="325" VerticalAlignment="Center" HorizontalAlignment="Center" WindowStartupLocation="CenterScreen">
     <Grid HorizontalAlignment="Left" Height="158" Margin="0,1,0,0" VerticalAlignment="Top" Width="290" RenderTransformOrigin="0.5,0.5">
-        <Button x:Name="Refresh" Height="76" Content="Refresh" Click="Refresh_Click" VerticalAlignment="Top" Margin="10,0,-10,0"/>
+        <Button x:Name="Refresh" Height="76" Content="Start!" Click="Refresh_Click" VerticalAlignment="Top" Margin="10,0,-10,0"/>
         <Button Content="Options" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="145" Height="76" Click="Options_Click"/>
         <Button Content="Freebie Settings" HorizontalAlignment="Left" Margin="160,81,-10,0" VerticalAlignment="Top" Width="140" Height="75" Click="Freebie_Settings_Cick"/>
     </Grid>

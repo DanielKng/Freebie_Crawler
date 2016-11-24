@@ -30,27 +30,11 @@ namespace Freebie_Crawler
 
         private void Combobox_Fill()
         {
-            if (Properties.Settings.Default.Refresh_Time != 15)
-            {
-                CheckForOptions();
-                //Fills the Combobox with Variables
                 Minutes_Combobox.Items.Add("5");
                 Minutes_Combobox.Items.Add("10");
                 Minutes_Combobox.Items.Add("15");
                 Minutes_Combobox.Items.Add("30");
                 Minutes_Combobox.Items.Add("60");
-            }
-            else if (Properties.Settings.Default.Refresh_Time == 15)
-            {
-                //Selects a standard Item (15 minutes)
-                Minutes_Combobox.SelectedIndex = 2;
-                //Fills the Combobox with Variables
-                Minutes_Combobox.Items.Add("5");
-                Minutes_Combobox.Items.Add("10");
-                Minutes_Combobox.Items.Add("15");
-                Minutes_Combobox.Items.Add("30");
-                Minutes_Combobox.Items.Add("60");
-            }
         }
         //Only save the Settings if the User wants to apply it
         private void Apply_Clicked(object sender, RoutedEventArgs e)
@@ -110,31 +94,31 @@ namespace Freebie_Crawler
             if (i == 5)
             {
                 Minutes_Combobox.SelectedIndex = 0;
-                Properties.Settings.Default.Refresh_Time = 5;
+                Properties.Settings.Default.Refresh_Time = 300000;
                 SaveSettings();
             }
             else if (i == 10)
             {
                 Minutes_Combobox.SelectedIndex = 1;
-                Properties.Settings.Default.Refresh_Time = 10;
+                Properties.Settings.Default.Refresh_Time = 600000;
                 SaveSettings();
             }
             else if (i == 15)
             {
                 Minutes_Combobox.SelectedIndex = 2;
-                Properties.Settings.Default.Refresh_Time = 15;
+                Properties.Settings.Default.Refresh_Time = 900000;
                 SaveSettings();
             }
             else if (i == 30)
             {
                 Minutes_Combobox.SelectedIndex = 3;
-                Properties.Settings.Default.Refresh_Time = 30;
+                Properties.Settings.Default.Refresh_Time = 1800000;
                 SaveSettings();
             }
             else if (i == 60)
             {
                 Minutes_Combobox.SelectedIndex = 4;
-                Properties.Settings.Default.Refresh_Time = 60;
+                Properties.Settings.Default.Refresh_Time = 3600000;
                 SaveSettings();
             }
             #endregion
@@ -155,23 +139,23 @@ namespace Freebie_Crawler
             {
                 this.Notify_PopUp.IsChecked = true;
             }
-            if (Properties.Settings.Default.Refresh_Time == 5)
+            if (Properties.Settings.Default.Refresh_Time == 300000)
             {
                 Minutes_Combobox.SelectedIndex = 0;
             }
-            if (Properties.Settings.Default.Refresh_Time == 10)
+            if (Properties.Settings.Default.Refresh_Time == 600000)
             {
                 Minutes_Combobox.SelectedIndex = 1;
             }
-            if (Properties.Settings.Default.Refresh_Time == 15)
+            if (Properties.Settings.Default.Refresh_Time == 900000)
             {
                 Minutes_Combobox.SelectedIndex = 2;
             }
-            if (Properties.Settings.Default.Refresh_Time == 30)
+            if (Properties.Settings.Default.Refresh_Time == 1800000)
             {
                 Minutes_Combobox.SelectedIndex = 3;
             }
-            if (Properties.Settings.Default.Refresh_Time == 60)
+            if (Properties.Settings.Default.Refresh_Time == 3600000)
             {
                 Minutes_Combobox.SelectedIndex = 4;
             }
@@ -181,7 +165,7 @@ namespace Freebie_Crawler
         {
             Properties.Settings.Default.Save();
             //We still love WinForms, dont we?
-            System.Windows.Forms.Application.Restart();
+            Close();
         }
     }
 }

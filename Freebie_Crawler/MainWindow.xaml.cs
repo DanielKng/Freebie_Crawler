@@ -16,19 +16,18 @@ namespace Freebie_Crawler
     public partial class MainWindow : Window
     {
         Windows10_Notifications win10_notification = new Windows10_Notifications();
-        Refresh_Call callRefresh = new Refresh_Call();
         public MainWindow()
         {
             InitializeComponent();
             //A shourtcut is needed for the Toast to show up.
             win10_notification.TryCreateShortcut();
-            //Initial Crawl
-            CrawlWebsite();
         }
 
         public void CrawlWebsite()
         {
             string pageContent = null;
+            //Start the Timer
+            Refresh_Call callRefresh = new Refresh_Call();
             //Open a HTTP-Request with the User-Specified URL
             HttpWebRequest myReq = (HttpWebRequest)WebRequest.Create(Properties.Settings.Default.Crawl_URL);
             //Get the HTTP-Response, since we want to Crawl the Content

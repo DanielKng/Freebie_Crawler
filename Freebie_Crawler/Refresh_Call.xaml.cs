@@ -27,9 +27,10 @@ namespace Freebie_Crawler
         async Task CrawlRefresh()
         {
             int refreshTime = Properties.Settings.Default.Refresh_Time;
-            refreshTime = (refreshTime * 60 * 60);
-            MessageBox.Show(Convert.ToString(refreshTime));
             await Task.Delay(refreshTime);
+
+            var callRefresh = new MainWindow();
+            callRefresh.CrawlWebsite();
         }
     }
 }
