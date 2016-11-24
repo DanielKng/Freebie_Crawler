@@ -113,7 +113,30 @@ namespace Freebie_Crawler
                 Properties.Settings.Default.Refresh_Time = 5;
                 SaveSettings();
             }
-
+            else if (i == 10)
+            {
+                Minutes_Combobox.SelectedIndex = 1;
+                Properties.Settings.Default.Refresh_Time = 10;
+                SaveSettings();
+            }
+            else if (i == 15)
+            {
+                Minutes_Combobox.SelectedIndex = 2;
+                Properties.Settings.Default.Refresh_Time = 15;
+                SaveSettings();
+            }
+            else if (i == 30)
+            {
+                Minutes_Combobox.SelectedIndex = 3;
+                Properties.Settings.Default.Refresh_Time = 30;
+                SaveSettings();
+            }
+            else if (i == 60)
+            {
+                Minutes_Combobox.SelectedIndex = 4;
+                Properties.Settings.Default.Refresh_Time = 60;
+                SaveSettings();
+            }
             #endregion
             this.Close();
         }
